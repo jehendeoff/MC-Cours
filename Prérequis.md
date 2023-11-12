@@ -115,9 +115,10 @@ puis `Paramètres`, cocher `Mémoire` et ajuster là les deux sections à un mul
 
 
 <details>
-<summary>SLAM</summary>
-
+<summary>
 # SLAM
+</summary>
+
 Cette section est dédié aux outils que les SLAM vont devoir installer
 
 ## Maven
@@ -183,7 +184,9 @@ Pour vous mettre les droits d'administrateur, dans la console tapez `op <votre p
 </details>
 
 <details>
-<summary>SISR</summary>
+<summary>
 # SISR
+</summary>
+
 Pas de bol, vous allez devoir tout installer comme TP.
 </details>

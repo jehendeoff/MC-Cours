@@ -64,13 +64,13 @@ Maintenant, allons voir comment se présente notre classe principale :
 Pour déclarer une commande, Il vous faudra d'abord dire au serveur de vous réserver la commande dans le fichier `plugin.yml`.
 
 Pour ce faire, il suffit d'ajouter : (l'autocomplétion devrait vous aider un peu)
-<code>
+
 ```yaml
 commands: 
 	"commande sans le slash":
 		usage: /<command> #mettez <command>, il ne faut pas y remplacer ici
 ```
-</code>
+
 
 Ça devrait ressembler à ça : 
 ![[Pasted image 20231112143958.png]]
@@ -96,7 +96,7 @@ Hors, il n'est toujours pas satisfait, une classe implémentant `TabExecutor` ne
 ![[Pasted image 20231112144926.png]]
 
 Vous devriez vous retrouver avec ça : 
-<code>
+
 ```java
 public class PingCommand implements TabExecutor {
     @Override
@@ -110,10 +110,10 @@ public class PingCommand implements TabExecutor {
     }
 }
 ```
-</code>
+
 
 Pour que ça soit plus simple à lire, je vous propose de changer, et de mettre ça : (j'ai sauté une ligne avant chaque `@NotNull` et changer le nom des variables)
-<code>
+
 ```java
     @Override
 public boolean onCommand(@NotNull CommandSender sender, 
@@ -131,7 +131,7 @@ public @Nullable List<String> onTabComplete(@NotNull CommandSender commandSender
 	return null;
 }
 ```
-</code>
+
 
 Votre commande est réservée, et sa classe est créee, le problème est que l'on ne l'a pas encore lié à la commande à la classe.
 
@@ -162,7 +162,7 @@ public final class Apprendre_intellijidea extends JavaPlugin {
 ```
 
 PingCommand
-<code>
+
 ```java
 package fr.jehende.apprendre_intellij; //Attention à changer cette ligne !
 
@@ -193,7 +193,7 @@ public class PingCommand implements TabExecutor {
 }
 
 ```
-</code>
+
 </details>
 
 Désormais, tentez, vous-même, de faire en sorte que la commande renvoie "Pong !" à quiconque fait la commande. (n'y passez pas plus de 5 minutes)

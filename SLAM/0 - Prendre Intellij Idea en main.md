@@ -1,4 +1,4 @@
-Ceci n'est pas le fichier à lire juste après l'introduction globale, vous voulez [[Projets/MC Cours/SLAM/Lisez-moi|Lisez-moi]]
+Ceci n'est pas le fichier à lire juste après l'introduction globale, vous voulez [[Projets/MC Cours/SLAM/Lisez-moi|Lisez-moi)
 
 # Objectif
 > Créez votre premier plugin, charger le dans un serveur, et voyez son effet
@@ -7,10 +7,10 @@ Ceci n'est pas le fichier à lire juste après l'introduction globale, vous voul
 
 # Créer son projet
 Tout d'abord lancez Intellij Idea, vous devriez avoir une interface ressemblant à ça : 
-![[Pasted image 20231112134255.png]]
+![Image](/Images/Pasted_image_20231112134255.png)
 
 Pour commencer à coder, faites donc `New Project` et dans les options `Generators` à gauche, sélectionnez `Minecraft`, vous aurez toute une ribambelle d'options 
-![[Pasted image 20231112134554.png]]
+![Image](/Images/Pasted_image_20231112134554.png)
 
 Tout d'abord, 
 1. veuillez sélectionner `Plugin` dans `Plateform type`,
@@ -20,14 +20,14 @@ Tout d'abord,
 Toutes ces options définissent quel genre de modification nous allons faire (mods / plugins)
 
 Ensuite, vous allez configurer le nom de votre plugin, sa classe principale (et son paquet)
-![[Pasted image 20231112135107.png]]
+![Image](/Images/Pasted_image_20231112135107.png)
 Tout d'abord : 
 1. dans la case `Name:` tout en haut, vous allez mettre le nom du **projet Java** (différent de celui du plugin)
 2. plus bas, dans `Plugin Name:` vous allez mettre le nom du plugin (qui sera présenté au serveur)
 3. *ne touchez pas à `Main Class:` ni à `Build System`*.
 4. dans `Build System Properties > Group ID` vous allez mettre le nom du paquet, une norme est l'inverse de l'ordre de votre nom de domaine, exemple : Mon nom de domaine est `jehende.fr`, j'inverse l'ordre, ça me donne `fr.jehende`. Puisque vous n'avez pas de nom de domaine, vous allez utiliser `io.github.<votre pseudo github>` *(`<votre pseudo>.github.io` est un domaine que vous pouvez utiliser)*
 Attention à ne pas confondre votre nom et votre pseudo / nom d'utilisateur, mon pseudo est `jehendeoff`.
-![[Pasted image 20231112140013.png]]
+![Image](/Images/Pasted_image_20231112140013.png)
 *(pour faire simple, un paquet est un dossier, ça permet d'éviter que mon plugin remplace le code d'un autre plugin, ce qui se passerait si on n'utiliserait pas de paquet et qu'on a une classe du même nom)*
 5. Vérifiez que le `JDK` est sur la version 17 (qu'importent les versions mineures) 
 
@@ -36,16 +36,16 @@ Attendez qu'Intellij Idea charge, ça prend du temps.
 
 # Découvrir
 Une fois que vous avez un avion en papier bleu (le logo de PaperMC) en haut à gauche, Intellij idea a fini de charger :
-![[Pasted image 20231112141624.png]]
+![Image](/Images/Pasted_image_20231112141624.png)
 
 Mais, où est mon code ? caché dans le menu déroulant du fameux avion en papier
-![[Pasted image 20231112142042.png]]
+![Image](/Images/Pasted_image_20231112142042.png)
 
 Tout d'abord, nous allons voir le fichier le plus important : `plugin.yml`. Il permet de déclarer au serveur Minecraft (Bukkit, Spigot, Paper) quelle est la classe principale à charger au démarrage, pour quelle version de Minecraft le plugin a été créé, quelles commandes à attribuer et beaucoup plus d'autres choses, que nous n'allons pas utiliser, par manque de temps.
-![[Pasted image 20231112142359.png]]
+![Image](/Images/Pasted_image_20231112142359.png)
 
 Maintenant, allons voir comment se présente notre classe principale :
-![[Pasted image 20231112142758.png]]
+![Image](/Images/Pasted_image_20231112142758.png)
 
 # Votre premier plugin
 > Vous allez devoir faire une commande, mais pas n'importe laquelle, une commande `/ping`
@@ -73,16 +73,16 @@ commands:
 
 
 Ça devrait ressembler à ça : 
-![[Pasted image 20231112143958.png]]
+![Image](/Images/Pasted_image_20231112143958.png)
 
 Une fois que le serveur vous a réservé la commande, vous allez devoir l'utiliser, pour ça vous allez devoir créer une nouvelle classe, pour ce faire, faites un clique droit sur votre paquet principal, puis `New` et `Java Class`
-![[Pasted image 20231112144151.png]]
+![Image](/Images/Pasted_image_20231112144151.png)
 
 Vous nommerez votre classe `PingCommand` ensuite faites `entré` (on essayera de toujours mettre des majuscules aux classes, des majuscules genre `onCommand` aux fonctions et des underscores pour les variables)
-![[Pasted image 20231112144318.png]]
+![Image](/Images/Pasted_image_20231112144318.png)
 
 Vous aurez : 
-![[Pasted image 20231112144431.png]]
+![Image](/Images/Pasted_image_20231112144431.png)
 
 Cependant, votre classe doit implémenter le `TabExecutor`, pour ça, à la ligne 3
 ```java
@@ -93,7 +93,7 @@ Vous allez ajouter `implements TabExecutor` entre `PingCommand` et l'accolade ou
 Idea vous criera dessus, car il ne connait pas `TabExecutor`, il faut l'important dans la classe, pour ça, survoler TabExecutor, il devrait vous proposer d'`Import class`, faites. 
 
 Hors, il n'est toujours pas satisfait, une classe implémentant `TabExecutor` ne peut être vide. Survoler donc la ligne et chosissez `Implement methods` et cliquez sur `OK` (ne touchez à **rien**).
-![[Pasted image 20231112144926.png]]
+![Image](/Images/Pasted_image_20231112144926.png)
 
 Vous devriez vous retrouver avec ça : 
 
@@ -235,26 +235,26 @@ public boolean onCommand(@NotNull CommandSender sender,
 Pour tester notre plugin, nous aurons besoin de tout d'abord compiler notre plugin, qui ne devrait pas avoir d'erreur (n'est pas souligné en rouge).
 
 Pour compiler notre plugin, nous allons cliquer sur la flèche verte en haut à gauche : 
-![[Pasted image 20231112150848.png]]
+![Image](/Images/Pasted_image_20231112150848.png)
 
 Nous allons ignorer tout `WARNING` dans la console.
 Si vous n'avez pas de soucis lors de la compilation, bravo, vous avez fait votre premier plugin. (vous pouvez cacher la terminale en survolant le côté droite de la console, pour cliquer sur l'icône `Réduire`)
 
 Mais il est où du coup ? votre plugin compilé se situe dans le nouveau dossier orange `target` sous le doux nom de `Apprendre_intellij-1.0-SNAPSHOT.jar` (nous n'allons pas utiliser le `original`, car c'est plus pour du java pûr).
-![[Pasted image 20231112151256.png]]
+![Image](/Images/Pasted_image_20231112151256.png)
 
 Mais je le mets où le plugin ? À part la réponse évidente, dans le dossier `plugins` du serveur Minecraft (qui contient déjà d'autres plugins, qui pourront vous être utile) (vous pouvez glisser votre plugin dans votre serveur)
-![[Pasted image 20231112151533.png]]
+![Image](/Images/Pasted_image_20231112151533.png)
 
 Une fois fait, vous pouvez démarré votre serveur, s'il est déjà démarré, vous pouvez exécuter la commande `plugman load` et appuyez sur la touche tab puis entré, ça devrait sortir le fichier de votre plugin, si vous n'avez pas lignes rouges (autres qu'essentials) dans la console, bien joué, votre plugin n'a pas cassé le serveur !
 
 Pour être sûr qu'il est chargé, faites la commande `plugins`:
-![[Pasted image 20231112152327.png]]
+![Image](/Images/Pasted_image_20231112152327.png)
 
 Vous pouvez ensuite essayer votre plugin.
 
 Si vous n'avez pas envie de redémarrer tout le serveur à chaque modification de votre plugin, après le remplacer dans le dossier plugin, vous pouvez exécuter la commande `plugman reload ` et appuyez sur tab, ça vous donnera la liste des plugins, tapez le nom de votre plugin et faites entrer : 
-![[Pasted image 20231112152352.png]]
+![Image](/Images/Pasted_image_20231112152352.png)
 </details>
 
 Désormais, tentez, vous-même, de faire en sorte qu'il ne réponde qu'au joueur. (n'y passez pas plus de 3 minutes, vous risquez de ne pas trouver)
@@ -314,4 +314,26 @@ public boolean onCommand(@NotNull CommandSender sender,
 ```
 </details>
 
-.
+Désormais, essayez, de faire en sorte que ça réponde `</ping numérique>ms de ping !`. 
+
+<details>
+<summary>Spoiler : ping numérique</summary>
+
+Ici, il faut simplement récupérer le ping du joueur, et ensuite le concaténer. Oui, nous pouvons concaténer un Int et un String, pourquoi pas ? 
+
+```java
+@Override
+public boolean onCommand(@NotNull CommandSender sender,
+						 @NotNull Command command,
+						 @NotNull String s,
+						 @NotNull String[] args) {
+	if (!(sender instanceof Player)){
+		sender.sendMessage("Vous n'êtes pas un joueur !");
+		return false;
+	}
+	Player p = (Player) sender;
+	sender.sendMessage(p.getPing() + "ms de ping !");
+	return true;
+}
+```
+</details>

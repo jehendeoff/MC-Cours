@@ -3,7 +3,7 @@
 > Faire des cours d'AP où l'on apprend à coder / héberger un serveur Minecraft
 
 # Introduction
-Avant de faire quoi que ce soit, tous les élèves devront installer les prérequis disponibles dans [[Prérequis]]
+Avant de faire quoi que ce soit, tous les élèves devront installer les prérequis disponibles dans [Prérequis](Prérequis.md)
 
 Minecraft est un jeu développé en Java d'abord par Markus Persson (Notch) puis désormais Mojang. 
 C'est dorénavant un jeu basé sur une architecture client-serveur, même en solo, un serveur tourne en fond.

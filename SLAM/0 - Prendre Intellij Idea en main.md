@@ -92,7 +92,7 @@ Vous allez ajouter `implements TabExecutor` entre `PingCommand` et l'accolade ou
 
 Idea vous criera dessus, car il ne connait pas `TabExecutor`, il faut l'important dans la classe, pour ça, survoler TabExecutor, il devrait vous proposer d'`Import class`, faites. 
 
-Hors, il n'est toujours pas satisfait, une classe implémentant `TabExecutor` ne peut être vide. Survoler donc la ligne et chosissez `Implement methods` et cliquez sur `OK` (ne touchez à **rien**).
+Or, il n'est toujours pas satisfait, une classe implémentant `TabExecutor` ne peut être vide. Survoler donc la ligne et chosissez `Implement methods` et cliquez sur `OK` (ne touchez à **rien**).
 ![Image](/Images/Pasted_image_20231112144926.png)
 
 Vous devriez vous retrouver avec ça : 

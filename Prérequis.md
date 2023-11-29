@@ -187,6 +187,5 @@ Pour vous mettre les droits d'administrateur, dans la console tapez `op <votre p
 <summary>
 # SISR
 </summary>
-
-Pas de bol, vous allez devoir tout installer comme TP.
+La mauvaise fin, vous allez devoir tout installer comme TP.
 </details>
